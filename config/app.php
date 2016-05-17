@@ -158,6 +158,8 @@ return [
 
         Leoalmar\CodeTags\Providers\CodeTagsServiceProvider::class,
         Leoalmar\CodeCategory\Providers\CodeCategoryServiceProvider::class,
+
+        \Cviebrock\EloquentSluggable\SluggableServiceProvider::class,
     ],
 
     /*
