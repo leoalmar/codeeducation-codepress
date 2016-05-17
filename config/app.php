@@ -156,6 +156,8 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        Leoalmar\CodeTags\Providers\CodeTagsServiceProvider::class,
+        Leoalmar\CodeCategory\Providers\CodeCategoryServiceProvider::class,
     ],
 
     /*
