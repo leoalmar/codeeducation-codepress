@@ -28,13 +28,28 @@ class AdminCategoriesTest extends \TestCase
             ->see('Category 1')
             ->see('Category 2')
             ->see('Category 3')
-            ->see('Category 4');
+            ->see('Category 4')
+        ;
     }
 
     public function test_click_create_new_category()
     {
         $this->visit('/admin/categories')
-            ->click('Create Category');
+            ->click('Create Category')
+            ->seePageIs('/admin/categories/create')
+            ->see('Create Category')
+        ;
+    }
+
+    public function test_create_new_category()
+    {
+        $this->visit('/admin/categories/create')
+            ->type('Category Teste', 'name')
+            ->check('active')
+            ->press('Submit')
+            ->seePageIs('/admin/categories')
+            ->see('Category Test')
+        ;
     }
 
 }
